@@ -1,0 +1,36 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form">
+	<Dialog id="helloDialog" title="update Record">
+		<beginButton>
+			<Button text="save" press="edit"/>
+		</beginButton>
+		
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" title="job details" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+			labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<Label text="Job Name"/>
+				<Input value="{/JobName}" id="eJobname"/>
+				<Label text="Job id"/>
+				<Input value="{/JobId}" enabled="false" id="eJobid"/>
+				<Label text="Job Location"/>
+				<Input value="{/jLocation}" id="eJobloc"/>
+				<Label text="Last date to apply"/>
+				<Input value="{/lastDate}" id="eDate"/>
+				<Label text="no of vacancy"/>
+				<Input value="{/vacancy}" id="eVacancy"/>
+			</f:content>
+		</f:SimpleForm>
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" title="company details" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+			labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+			singleContainerFullSize="false">
+			<f:content>
+				<Label text="company name"/>
+				<Input value="{/companyName}" id="eCname"/>
+				<Label text="company location"/>
+				<Input value="{/Clocation}" id="eCloc"/>
+				<Label text="company ceo"/>
+				<Input value="{/ceo}" id="eCeo"/>
+			</f:content>
+		</f:SimpleForm>
+	</Dialog>
+</core:FragmentDefinition>

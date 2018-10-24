@@ -1,0 +1,33 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" 
+xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" 
+controllerName="shop.Shopingcart.controller.Login">
+	<App>
+		<pages>
+			<Page title="Title">
+				<content>
+						<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" class="loginpg">
+									
+						<f:toolbar>
+							<Toolbar id="TB1">
+								<Title id="Title1" text="Login" level="H4" titleStyle="H4"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</f:toolbar>
+						<Label text="user Name"/>
+						<Input value="" placeholder="username" width="20em" id="user"/>
+						<Label text="password"/>
+						<Input value="" placeholder="password" width="20em" type="Password"/>
+						<Label text=""/>
+					<f:content>
+					    <Label xmlns="sap.m" text=""/>
+				<Button    id="button0" text="LOGIN" width="50%"  activeIcon="sap-icon://journey-arrive"
+						icon="sap-icon://journey-arrive" type="Accept" press="action"/>
+					</f:content>
+					</f:SimpleForm>
+				    
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

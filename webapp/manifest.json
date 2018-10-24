@@ -1,0 +1,121 @@
+{
+	"_version": "1.8.0",
+	"sap.app": {
+		"id": "shop.Shopingcart",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": ["sap_hcb", "sap_belize"]
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "shop.Shopingcart.view.app",
+			"type": "XML"
+		},
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "shop.Shopingcart.i18n.i18n"
+				}
+			},
+	  "invoice": {
+		"type": "sap.ui.model.json.JSONModel",
+		"uri": "Invoices.json"
+	  }
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "shop.Shopingcart.view",
+				"controlAggregation": "pages",
+				"controlId": "idAppControl",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"name": "Login",
+				"pattern": "",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Login"]
+			}, {
+				"name": "Admin",
+				"pattern": "Admin",
+				"target": ["Admin"]
+			}, {
+				"name": "Employee",
+				"pattern": "Employee",
+				"target": ["Employee"]
+			}],
+			"targets": {
+				"Login": {
+					"viewType": "XML",
+					"viewName": "Login",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "shop.Shopingcart.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"Admin": {
+					"viewType": "XML",
+					"viewName": "Admin",
+					"routerClass": "sap.m.routing.Router",
+					"async": true,
+					"viewPath": "shop.Shopingcart.view",
+					"controlAggregation": "pages",
+					"controlId": "idAppControl",
+					"clearControlAggregation": false
+				},
+				"Employee": {
+					"viewType": "XML",
+					"viewName": "Employee"
+				}
+			}
+		}
+	}
+}

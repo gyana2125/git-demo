@@ -1,0 +1,78 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:l="sap.ui.layout" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	controllerName="shop.Shopingcart.controller.Admin" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Admin login">
+				<content>
+					<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+						<detailPages>
+							<Page id="detail" title="Shoping cart Details" class="sapUiStdPage">
+								<IconTabBar selectedKey="__filter0" id="bar0">
+									<items>
+										<IconTabFilter icon="sap-icon://hint" iconColor="Critical">
+											<f:SimpleForm id="SimpleFormChange354" editable="true"  layout="ResponsiveGridLayout" title="job details" labelSpanXL="3" labelSpanL="3"
+												labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+												columnsL="1" columnsM="1" singleContainerFullSize="false" >
+												<f:content>
+													<Label text="Job Name"/>
+													<Input value="{/JobName}" editable="false" id="jobname"/>
+													<Label text="Job id" />
+													<Input value="{/JobId}"  editable="false" id="jobid"/>
+													<Label text="Job Location" />
+													<Input value="{/jLocation}" editable="false" id="jobLocation"/>
+													<Label text="Last date to apply" />
+													<Input value="{/lastDate}" editable="false" id="lastdate"/>
+													<Label text="no of vacancy" />
+													<Input value="{/vacancy}" editable="false" id="vacancy"/>
+													<Label text="company name" />
+													<Input value="{/companyName}" editable="false" />
+														</f:content>
+											</f:SimpleForm>
+												</IconTabFilter>
+												<IconTabFilter icon="sap-icon://collaborate" iconColor="Positive">
+													<f:SimpleForm id="SimpleFormChange355" editable="true" layout="ResponsiveGridLayout" title="company details" labelSpanXL="3" labelSpanL="3"
+												labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1"
+												columnsL="1" columnsM="1" singleContainerFullSize="false">
+												<f:content>
+														<Label text="Company name" />
+													<Input value="{/companyName}" editable="false"/>
+														<Label text="Company location" />
+													<Input value="{/Clocation}" editable="false"/>
+														<Label text="Ceo" />
+													<Input value="{/ceo}" editable="false"/>
+													
+													</f:content>
+											</f:SimpleForm>
+										</IconTabFilter>
+									</items>
+								</IconTabBar>
+							</Page>
+						</detailPages>
+						<masterPages >
+							<List items="{invoice>/Invoices}">
+								<items>
+									<ObjectListItem title="{invoice>JobName}" intro="{invoice>companyName}" number="{invoice>lastDate}" type="Navigation" press="onselectjob">
+										<firstStatus>
+											<ObjectStatus text="{ path: 'invoice>vacancy', formatter: '.formatter.statusText' }"/>
+										</firstStatus>
+									</ObjectListItem>
+								</items>
+							</List>
+						</masterPages>
+					</SplitApp>
+				</content>
+				<footer>
+					<Bar>
+						<contentLeft>
+							<Button width="100px" id="button0" icon="sap-icon://add" press="onAdd"/>
+						</contentLeft>
+						<contentRight>
+						
+							<Button id="aprove" text="edit" press="onEdit" type="Accept" icon="sap-icon://accept"/>
+						</contentRight>
+					</Bar>
+				</footer>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

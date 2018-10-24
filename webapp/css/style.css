@@ -1,0 +1,13 @@
+/* Enter your custom styles here */
+.loginpg
+{
+	border: 3px solid black;
+	background-color: red;
+	text-color:white;
+    display: block;
+    width: 50%;
+    margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}/* Enter your custom styles here */

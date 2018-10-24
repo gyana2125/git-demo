@@ -1,0 +1,43 @@
+{
+	"employee": [{
+		"userId": "001",
+		"jobTitleName": "Developer",
+		"firstName": "Romin",
+		"lastName": "Irani",
+		"employeeCode": "E1",
+		"region": "CA",
+		"phoneNumber": "408-1234567",
+		"emailAddress": "romin.k.irani@gmail.com",
+		"salary":"12" 
+	}, {
+		"userId": "002",
+		"jobTitleName": "Developer",
+		"firstName": "Neil",
+		"lastName": "Irani",
+		"employeeCode": "E2",
+		"region": "CA",
+		"phoneNumber": "408-1111111",
+		"emailAddress": "neilrirani@gmail.com",
+		"salary":"25"
+	}, {
+		"userId": "003",
+		"jobTitleName": "Program Directory",
+		"firstName": "Tom",
+		"lastName": "Hanks",
+		"employeeCode": "E3",
+		"region": "CA",
+		"phoneNumber": "408-2222222",
+		"emailAddress": "tomhanks@gmail.com",
+		"salary":"18" 
+	},{
+		"userId": "004",
+		"jobTitleName": "UI5 Developer",
+		"firstName": "Gyana",
+		"lastName": "Mohapatra",
+		"employeeCode": "E4",
+		"region": "Bangalore",
+		"phoneNumber": "7008932904",
+		"emailAddress": "gyana256@gmail.com",
+		"salary":"50" 
+	}]
+}

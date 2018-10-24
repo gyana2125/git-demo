@@ -1,0 +1,45 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="shop.Shopingcart.controller.Employee"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+	<pages>
+			<Page title="employee login">
+				<content>
+				
+					<SplitApp id="SplitAppDemo" initialDetail="detail" initialMaster="master" orientationChange="onOrientationChange">
+						<detailPages>
+							<Page id="detail" title="Shoping cart Details" class="sapUiStdPage">
+								<Panel >
+									<content>
+										<Label text="product name" width="50%"/>
+										<Input width="50%" id="name" enabled="false"/>
+										<Label text="price" width="50%"/>
+										<Input width="50%" id="email" enabled="false"/>
+										<Label text="quantity" width="50%"/>
+										<Input width="50%" id="phn" enabled="false"/>
+									</content>
+								</Panel>
+								<IconTabBar selectedKey="__filter0" id="bar0">
+									<items>
+										<IconTabFilter icon="sap-icon://hint" iconColor="Critical"/>
+										<IconTabFilter icon="sap-icon://collaborate" iconColor="Positive"/>
+									</items>
+								</IconTabBar>
+							</Page>
+						</detailPages>
+						<masterPages>
+							
+						</masterPages>
+					</SplitApp>
+				</content>
+				<footer>	<Bar>
+						<contentLeft>
+						<Button width="100px" id="button0" icon="sap-icon://add"/>
+						</contentLeft>
+					</Bar>
+					
+				</footer>
+			
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
